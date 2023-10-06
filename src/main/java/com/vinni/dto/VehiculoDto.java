@@ -5,6 +5,8 @@ public class VehiculoDto {
     private String marca;
     private int modelo;
     private long precio;
+    private double valorSeguroSoat = 90000;
+    private double seguroTodoRiesgo = 350000;
 
     public VehiculoDto() {
     }
@@ -46,6 +48,16 @@ public class VehiculoDto {
 
     public void setPrecio(long precio) {
         this.precio = precio;
+    }
+
+    // obtener valor seguro soat
+    public double getValorSeguroSoat() {
+        return this.valorSeguroSoat * 0.19 + this.valorSeguroSoat;
+    }
+
+    // obtener seguro todo riesgo
+    public double getSeguroTodoRiesgo() {
+        return this.seguroTodoRiesgo * 0.19 + this.seguroTodoRiesgo;
     }
 
 }
